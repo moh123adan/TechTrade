@@ -1,9 +1,11 @@
-import { View, Text } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 
-export default function index () {
+export default function index() {
   return (
     <View>
-      <Text>index Screen</Text>
+      <Text>Home</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({});
