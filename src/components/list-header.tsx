@@ -16,7 +16,8 @@ export const listHeader = () => {
             <Text style={styles.avatarText}>Hello Mohamed</Text>
           </View>
         </View>
-        <Link style={styles.cartContainer} href="/cart" asChild>
+     <View style={styles.headerRight}>
+     <Link style={styles.cartContainer} href="/cart" asChild>
           <Pressable>
             {({ pressed }) => (
               <View>
@@ -33,6 +34,8 @@ export const listHeader = () => {
             )}
           </Pressable>
         </Link>
+        
+     </View>
       </View>
       <View style={styles.heroContainer}></View>
       <View style={styles.categoriesContainer}></View>
