@@ -1,9 +1,10 @@
 import { Tabs } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { StyleSheet } from "react-native";
 
 const TabLayout = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.safeEra}>
       <Tabs
         screenOptions={{
           tabBarActiveTintColor: "#1BC464",
@@ -14,6 +15,7 @@ const TabLayout = () => {
             borderTopRightRadius: 20,
             paddingTop: 10,
           },
+          headerShown: false,
         }}
       >
         <Tabs.Screen
@@ -29,3 +31,9 @@ const TabLayout = () => {
 };
 
 export default TabLayout;
+
+const styles = StyleSheet.create({
+  safeEra: {
+    flex: 1,
+  },
+});

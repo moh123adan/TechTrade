@@ -1,12 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
+import React from "react";
 
-const index = () => {
+const Orders = () => {
   return (
-    <div>
-        Index
-      
-    </div>
-  )
-}
+    <View>
+      <Text>Orders</Text>
+    </View>
+  );
+};
 
-export default index
+export default Orders;
+
+const styles = StyleSheet.create({});
