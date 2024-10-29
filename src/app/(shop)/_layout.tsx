@@ -6,7 +6,9 @@ import { FontAwesome } from "@expo/vector-icons";
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>["name"];
   color: string;
-}) {}
+}) {
+  return <FontAwesome size={24} {...props} style={{ color: "#1BC464" }} />;
+}
 
 const TabLayout = () => {
   return (
@@ -27,10 +29,21 @@ const TabLayout = () => {
         <Tabs.Screen
           name="index"
           options={{
-            headerShown: false,
+            title: "shop",
+            tabBarIcon(props) {
+              return <TabBarIcon {...props} name="shopping-cart" />;
+            },
           }}
         />
-        <Tabs.Screen name="orders" options={{}} />
+        <Tabs.Screen
+          name="orders"
+          options={{
+            title: "Orders",
+            tabBarIcon(props) {
+              return <TabBarIcon {...props} name="book" />;
+            },
+          }}
+        />
       </Tabs>
     </SafeAreaView>
   );
