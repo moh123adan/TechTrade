@@ -1,13 +1,14 @@
 import { PRODUCTS } from "@/assets/products";
 import { StyleSheet, View, Text } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
+import { ProductListItem } from "../components/product-list-item";
 
 export default function index() {
   return (
     <View>
       <FlatList
         data={PRODUCTS}
-        renderItem={({ item }) => <View></View>}
+        renderItem={({ item }) => <ProductListItem product={item} />}
         keyExtractor={(item) => item.id.toString()}
         numColumns={2}
         ListHeaderComponent={<Text>Products</Text>}
