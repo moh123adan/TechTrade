@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native";
 
 const TabLayout = () => {
   return (
-    <SafeAreaView style={styles.safeEra}>
+    <SafeAreaView edges={['top']} style={styles.safeEra}>
       <Tabs
         screenOptions={{
           tabBarActiveTintColor: "#1BC464",
