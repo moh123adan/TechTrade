@@ -26,6 +26,9 @@ export const listHeader = () => {
                   color="gray"
                   style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
                 />
+                <View style={styles.badgeContainer}>
+                  <Text style={styles.badgeText}>{1}</Text>
+                </View>
               </View>
             )}
           </Pressable>
